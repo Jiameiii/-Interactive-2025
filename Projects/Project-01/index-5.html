@@ -1,20 +1,95 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL ABOUT CATSSSSSS 🐾</title>
+    <style>
+        :root {
+            --main-color: #ffe6f2;
+            --accent-color: #ff99cc;
+        }
 
-<html>
-	<head>
-		<title>Project 1 All HTML</title>
-		<meta charset="utf-8"/>
-		<link rel="stylesheet" href="main.css" />
-	</head>
-	
-	<body>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: linear-gradient(45deg, #fff0f5, #f8f8ff);
+            margin: 0;
+            padding: 20px;
+        }
 
-		<div class="main">
+        .header {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
 
-			<h1>All HTML</h1>
-				
-				
-		</div>
-	
-	</body>
+        .cat-title {
+            font-size: 3em;
+            color: #ff6699;
+            text-shadow: 2px 2px #ffffff;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .cat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .cat-paw {
+            position: fixed;
+            pointer-events: none;
+            animation: fall linear forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="cat-title">CATSSSS <span class="cat-emoji">🐈🎀</span></h1>
+    </header>
+
+    <div class="cat-grid">
+        <div class="cat-card">
+            <div class="cii-cat"><a href="https://siqiwang2025.github.io/Interactive-2025/Projects/Project-01/project1.html"> 
+               check this out!
+            </div>
+            <center><div> <h1> <a href="https://jiameiii.github.io/-Interactive-2025/">Main Page</a> </h1>
+            <h1> <a href="https://jiameiii.github.io/-Interactive-2025/">Go To Next Page</a></h1>
+        </center>
+        </div>
+    <script>
+        document.addEventListener('click', (e) => {
+            const paw = document.createElement('div');
+            paw.textContent = '🐾';
+            paw.className = 'cat-paw';
+            paw.style.left = e.pageX + 'px';
+            paw.style.top = e.pageY + 'px';
+            paw.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(paw);
+            
+            setTimeout(() => paw.remove(), 5000);
+        });
+    </script>
+</body>
 </html>
