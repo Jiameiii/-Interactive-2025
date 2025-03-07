@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫咪跑步 Zoetrope - 手动翻页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="flipbook">
+        <!-- 单选按钮用于切换页面 -->
+        <input type="radio" id="page1" name="page" checked>
+        <input type="radio" id="page2" name="page">
+        <input type="radio" id="page3" name="page">
+        <input type="radio" id="page4" name="page">
+        <input type="radio" id="page5" name="page">
+        <input type="radio" id="page6" name="page">
+        <input type="radio" id="page7" name="page">
+        <input type="radio" id="page8" name="page">
+        <input type="radio" id="page9" name="page">
+        <input type="radio" id="page10" name="page">
+        <input type="radio" id="page11" name="page">
+        <input type="radio" id="page12" name="page">
+        <input type="radio" id="page13" name="page">
+        <input type="radio" id="page14" name="page">
+        <input type="radio" id="page15" name="page">
+        <input type="radio" id="page16" name="page">
+        <input type="radio" id="page17" name="page">
+        <input type="radio" id="page18" name="page">
+        <input type="radio" id="page19" name="page">
+        <input type="radio" id="page20" name="page">
+        <input type="radio" id="page21" name="page">
+        <input type="radio" id="page22" name="page">
+        <input type="radio" id="page23" name="page">
+        <input type="radio" id="page24" name="page">
+
+        <!-- 页面内容 -->
+        <div class="page" id="content1" style="background-image: url('cat_frame_1.jpg');"></div>
+        <div class="page" id="content2" style="background-image: url('cat_frame_2.jpg');"></div>
+        <div class="page" id="content3" style="background-image: url('cat_frame_3.jpg');"></div>
+        <div class="page" id="content4" style="background-image: url('cat_frame_4.jpg');"></div>
+        <div class="page" id="content5" style="background-image: url('cat_frame_5.jpg');"></div>
+        <div class="page" id="content6" style="background-image: url('cat_frame_6.jpg');"></div>
+        <div class="page" id="content7" style="background-image: url('cat_frame_7.jpg');"></div>
+        <div class="page" id="content8" style="background-image: url('cat_frame_8.jpg');"></div>
+        <div class="page" id="content9" style="background-image: url('cat_frame_9.jpg');"></div>
+        <div class="page" id="content10" style="background-image: url('cat_frame_10.jpg');"></div>
+        <div class="page" id="content11" style="background-image: url('cat_frame_11.jpg');"></div>
+        <div class="page" id="content12" style="background-image: url('cat_frame_12.jpg');"></div>
+        <div class="page" id="content13" style="background-image: url('cat_frame_13.jpg');"></div>
+        <div class="page" id="content14" style="background-image: url('cat_frame_14.jpg');"></div>
+        <div class="page" id="content15" style="background-image: url('cat_frame_15.jpg');"></div>
+        <div class="page" id="content16" style="background-image: url('cat_frame_16.jpg');"></div>
+        <div class="page" id="content17" style="background-image: url('cat_frame_17.jpg');"></div>
+        <div class="page" id="content18" style="background-image: url('cat_frame_18.jpg');"></div>
+        <div class="page" id="content19" style="background-image: url('cat_frame_19.jpg');"></div>
+        <div class="page" id="content20" style="background-image: url('cat_frame_20.jpg');"></div>
+        <div class="page" id="content21" style="background-image: url('cat_frame_21.jpg');"></div>
+        <div class="page" id="content22" style="background-image: url('cat_frame_22.jpg');"></div>
+        <div class="page" id="content23" style="background-image: url('cat_frame_23.jpg');"></div>
+        <div class="page" id="content24" style="background-image: url('cat_frame_24.jpg');"></div>
+    </div>
+
+    <div class="controls">
+        <button class="prev" onclick="document.getElementById('page' + (getCurrentPage() - 1)).checked = true;">←</button>
+        <button class="next" onclick="document.getElementById('page' + (getCurrentPage() + 1)).checked = true;">→</button>
+    </div>
+
+    <script>
+        function getCurrentPage() {
+            for (let i = 1; i <= 24; i++) {
+                if (document.getElementById('page' + i).checked) {
+                    return i;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

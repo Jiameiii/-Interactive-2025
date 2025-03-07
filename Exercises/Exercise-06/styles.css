@@ -1,0 +1,67 @@
+:root {
+  --main-color: #2A5C82;
+  --accent-color: #C44536;
+  --anim-duration: 5s;
+}
+
+#DIV1 {
+  height: 300px;
+  width: 300px;
+  margin: 50px auto;
+  border: 2px solid var(--main-color);
+  position: relative;
+  background: #f8f8f8;
+  perspective: 1000px;
+}
+
+#DIV2 {
+  width: 150px;
+  height: 150px;
+  background: var(--accent-color);
+  opacity: 0.8;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  animation: complexAnim var(--anim-duration) infinite alternate;
+}
+
+#DIV2original {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed var(--main-color);
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  opacity: 0.3;
+}
+
+@keyframes complexAnim {
+  0% {
+    transform: 
+      translate(0, 0) 
+      scale(1, 1) 
+      rotate(0deg);
+    opacity: 0.8;
+  }
+  30% {
+    transform: 
+      translate3d(50px, -30px, 100px) 
+      scale(1.2, 0.8) 
+      rotate3d(1, 0.5, 0.2, 90deg);
+    opacity: 0.6;
+  }
+  60% {
+    transform: 
+      translate(-20px, 40px) 
+      scale(0.9, 1.1) 
+      rotate(-180deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: 
+      translate3d(0, 0, -200px) 
+      scale(0.8, 0.8) 
+      rotate3d(0, 1, 0.5, 360deg);
+    opacity: 1;
+  }
+}
