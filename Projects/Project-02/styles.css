@@ -4,59 +4,67 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: #f0f0f0;
 }
 
-/* Zoetrope container */
-.zoetrope-container {
-    width: 320px;
-    height: 320px;
-    position: relative;
+/* 图片容器 */
+.gallery {
+    width: 1730px;
+    height: 1012px;
     overflow: hidden;
-    border-radius: 50%;
+    position: relative;
 }
 
-/* The Zoetrope rotating frames */
-.zoetrope {
-    position: absolute;
+/* 所有图片 */
+.images {
+    display: flex;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform-origin: center;
-    animation: rotateFrames 4s infinite linear;
 }
 
-/* Each frame of the Zoetrope */
+/* 单张图片 */
 .frame {
-    position: absolute;
-    width: 60px;
-    height: 60px;
+    min-width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 50%;
-    transform-origin: center;
+    display: none;
 }
 
-/* Position the frames in a circular layout */
-@for $i from 0 through 23 {
-    .zoetrope .frame:nth-child(#{$i+1}) {
-        transform: rotate(calc(15deg * #{$i})) translateX(120px);
-    }
+/* 默认显示第一张 */
+#img1:checked ~ .gallery .images .frame:nth-child(1),
+#img2:checked ~ .gallery .images .frame:nth-child(2),
+#img3:checked ~ .gallery .images .frame:nth-child(3),
+#img4:checked ~ .gallery .images .frame:nth-child(4),
+#img5:checked ~ .gallery .images .frame:nth-child(5),
+#img6:checked ~ .gallery .images .frame:nth-child(6),
+#img7:checked ~ .gallery .images .frame:nth-child(7),
+#img8:checked ~ .gallery .images .frame:nth-child(8),
+#img9:checked ~ .gallery .images .frame:nth-child(9),
+#img10:checked ~ .gallery .images .frame:nth-child(10),
+#img11:checked ~ .gallery .images .frame:nth-child(11),
+#img12:checked ~ .gallery .images .frame:nth-child(12),
+#img13:checked ~ .gallery .images .frame:nth-child(13),
+#img14:checked ~ .gallery .images .frame:nth-child(14),
+#img15:checked ~ .gallery .images .frame:nth-child(15),
+#img16:checked ~ .gallery .images .frame:nth-child(16),
+#img17:checked ~ .gallery .images .frame:nth-child(17),
+#img18:checked ~ .gallery .images .frame:nth-child(18),
+#img19:checked ~ .gallery .images .frame:nth-child(19),
+#img20:checked ~ .gallery .images .frame:nth-child(20),
+#img21:checked ~ .gallery .images .frame:nth-child(21),
+#img22:checked ~ .gallery .images .frame:nth-child(22),
+#img23:checked ~ .gallery .images .frame:nth-child(23),
+#img24:checked ~ .gallery .images .frame:nth-child(24) {
+    display: block;
 }
 
-/* The rotation animation */
-@keyframes rotateFrames {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+/* 隐藏 radio 按钮 */
+input[type="radio"] {
+    display: show;
 }
