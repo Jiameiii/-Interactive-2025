@@ -1,0 +1,56 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #DADADA;         
+}
+
+
+/* if you want to change the background of your canvas, do it here */
+
+.canvas {
+	width: 900px;
+	height: 556px;
+	margin: 100px auto;
+	background: black;
+	position: relative;
+	border: solid black 5px;
+}
+
+
+/* this is where you can style the objects in your still life */
+
+.square{
+	width: 100px;
+	height: 100px;
+	background: blue;
+	position: absolute;
+	top: 180px;
+	left: 450px;
+}
+
+.square2{
+	transition: background-color 2s ease,
+				border-radius 2s ease;
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+	bottom: 70px;
+    left: 400px;
+	border-radius: 0%;
+}
+
+.square2:hover{
+	background-color: white;
+	border-radius: 100%;
+}
+
+.table {
+    position: absolute;
+    bottom: 0;
+     width: 100%;
+    height: 80px;
+    background: #8B4513;
+    border-top: 5px solid #6b2f0b;
