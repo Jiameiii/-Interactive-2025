@@ -1,0 +1,85 @@
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  background: #ffe6f0;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.calendar {
+  background: #fff0f5;
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.navigation button {
+  background-color: #ff8cb7;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.weekdays, .days {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.weekdays div, .day, .empty {
+  width: calc(100% / 7);
+  text-align: center;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+
+.weekdays div {
+  font-weight: bold;
+  color: #555;
+  background: #ffc0cb;
+}
+
+.day {
+  background: #ffe4ec;
+  margin: 2px 0;
+  border-radius: 4px;
+  min-height: 60px;
+  position: relative;
+}
+
+.day:hover {
+  background: #fdd8e5;
+  cursor: pointer;
+}
+
+.label {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  font-size: 0.65rem;
+  padding: 2px;
+  border-radius: 3px;
+  color: white;
+}
+
+.red { background-color: #e63946; }
+.blue { background-color: #457b9d; }
+
+.empty {
+  visibility: hidden;
+}
